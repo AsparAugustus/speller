@@ -1,0 +1,67 @@
+LOAD-
+Open dictionary file
+    use fopen - check if it returns NULL!
+    
+Read strings from file one at a time
+    fscanf(file, "%s", word)
+    fscanf will return EOF once it reachs end of file
+    
+Create a new node for each word
+    Use malloc
+    Remember to check if return value is NULL
+    Copy word into node using strcpy
+    
+    
+Hash word to obtain hash value
+
+Insert node into hash table at that location
+    Recall that hashtable is an array of linked lists
+    Be sure to get pointers in the correct order!
+
+Implement an empty node for the hash table
+    allocate memory for the size of hash table (allow for collisions?)
+    
+
+
+Make nodes for each word, linking first node to second
+Count amount of nodes -> int size
+
+                
+
+Count number of words as fscanf scans dictionary
+Amount of words at the end = dict_word_count
+
+Iterate through each word of dictionary with fscanf and create a node for each word
+    check if NULL
+assign memory for new node-
+    check if NULL-
+update new node pointer with word
+    hash word to find hash table number
+    set pointer from hash table index to said node
+        find collision? (!= NULL)
+        if == NULL, set pointer of new node to hash table, and set next of node to NULL.
+        if != NULL, go to next pointer indefinitely until it's == NULL
+        then repeat step 42.-
+        
+        
+Check
+    Hash word to obtain a hash value
+    Access linked list at that index in the hash table
+    Traverse linked list, looking for the word (strcasecmp)
+        compare word where cursor is pointing to (cursor points to where head points to at start)
+        if word found, return true
+        if next->NULL is found, return false
+        
+        working on unload....
+    
+    
+    
+    
+ 
+            
+./speller dictionaries/small texts/cat.txt
+
+
+                
+                
+    
